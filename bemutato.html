@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <title>Bemutató</title>
+    <link rel="stylesheet" href="code/bemutato.css">
+    <script src="code/js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body id="body">
+    <nav>
+        <ul>
+            <li><a class="lapok" href="index.html">Kezdőlap</a></li>
+            <li><a class="lapok" href="#">Bemutató</a></li>
+            <li><a class="lapok" href="forrasok.html">Források</a></li>
+            <li><a class="lapok" href="keszitok.html">Készítők</a></li>
+        </ul>
+    </nav>
+
+    <div class="sor"></div>
+    <header>
+        <h1>Gyakori képfájl típusok</h1>
+    </header>
+
+    <div class="doboz">
+        <p>A képfájlok használata igen elterjett a mai
+            <br>világban és nagyon sok fajtát különböztetünk meg.
+            <br>Mindegyik formátumot más más dologra/dolgokra alkalmazzuk
+            <br>
+            <br>A példaképek megtekintéséhez kattintson a <i>"Példa"</i>
+            <br> gombra valamelyik képfájl típusnál.</p>
+        <img id="peldakep" style="display: none;">
+        <p style="display: none;" id="nemLehet">Sajnos <i>.WMF</i> fájlokat a böngésző nem tud megnyitni,
+            <br>de <a href="src/wmf.wmf" download="wmf">ide</a> kattintva tud letölteni egyet.
+            <br>Alapból ezt paintben fogja megnyitni.</p>
+        <p style="display: none;" id="pdfuzenet">Sajnos <i>.PDF</i> fájlokat a böngésző nem tud megnyitni,
+            <br>de <a href="#" onclick="nyomtat()">ide</a> kattintva kinyomtathatja a<br> feladatunk szövegét.</p>
+    </div>
+
+    <div class="fajtakdoboza">
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.BMP</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>A Windows saját bittérképes formátuma tehát minden Windowsos rajzprogram felismeri. Tömörítetlen bitterkép. Max 24 bit színmélységet tud tárolni és csak az op. rendszer által meghatározott szineket használ.</p>
+                <button onclick='megjelenites("bmp")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.JPG-JPEG</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>A formátum fejlesztője:Joint Photographic Expert Group. "tömörítési arány 5:1 és 20:1 közötti (a kitömörítéshez nincs szükség segédprogramra, a megjelenítést végző program a megnyitáskor elvégzi azt)." A JPEG formátum 24 bit mélységet
+                    képes kezelni ami 16,7 millió szin ez a legelterjettebb.</p>
+                <button onclick='megjelenites("jpg")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.GIF</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>Graphics Interchange Format" fejlesztője a Compuserve maximum 256 szint tudod használni. Két fajtája van:A GIF87 és a GIF89a képes animált gifet csinálni. A JPEG.et fényképekre használják. Mig a GIF.et animált képsorokra.</p>
+                <button onclick='megjelenites("gif")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.PNG</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>ortable Network Graphics ez a harmadik leghasználtabb képfájl formátum.A PNG egy veszteségmentes tömörítési eljárás. Ez azt jelenti, hogy ha adott egy tömörítetlen kép, melyet PNG formátumba tömörítünk. Nem licencelt formátum tehát "szabad"</p>
+                <button onclick='megjelenites("png")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.WMF</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>A WMF fájl egy vektorgrafika, amelyet a Microsoft fejlesztett ki saját Windows Metafile Format (WMF) formátumban. A rajz műveleteket tároló metafájl-rekordok sorozatát tartalmazza, amelyek parancsokat tartalmaznak a grafikát alkotó vonalak,
+                    körök és téglalapok rajzolásához.</p>
+                <button onclick='megjelenites("wmf")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+        <div class="fajtak">
+            <div class="fajtakHeader">
+                <h2>.PDF</h2>
+            </div>
+            <div class="fajtakBody">
+                <p>Portable Data Format Adobe Acrobat fájlformátuma. Leginkább szöveges fájlformátum max 800-ig nagyítható. Tartalmazhat JPEG-tömörített, ill. tömörítetlen bittérképes elemeket is. </p>
+                <button onclick='megjelenites("pdf")'>Példa</button>
+            </div>
+            <div class="sor"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p><i>IKT Projektmunka 2021.03.31</i></p>
+    </footer>
+
+</body>
+
+</html>
